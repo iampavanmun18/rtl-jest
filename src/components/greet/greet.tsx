@@ -1,7 +1,8 @@
-import React from 'react'
-
-export const Greet = () => {
+type GreetProp = {
+    name? : string
+}
+export const Greet = (props: GreetProp) => {
   return (
-    <div>Greet</div>
+    <div>Hello {props.name}</div>
   )
 }
