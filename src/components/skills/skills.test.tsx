@@ -1,6 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import { Skills } from "./skills";
 
+
+//getAllByRole used to find multiple elements in the dom
 describe('Skills', () => {
     const skills = ['html', 'JS', 'React']
 
@@ -14,6 +16,6 @@ describe('Skills', () => {
         render(<Skills skills={skills}/>)
         const listItems = screen.getAllByRole('listitem');
         console.log("listItems",listItems);
-        expect(listItems).toHaveLength(3)
+        expect(listItems).toHaveLength(skills.length)
       })
 })
