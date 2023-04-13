@@ -27,6 +27,13 @@ describe("Application", () => {
     //getDisplayValue returns the input,textArea, or select element that has matching display value
     const getDisplayName = screen.getByDisplayValue('Pavan')
     expect(getDisplayName).toBeInTheDocument();
+
+
+    //getByAltText returns the element that has given alt text
+    //this method only supports elements which accept an alt attribute like <img> <input>
+
+    const getAltValue = screen.getByAltText("a person with a laptop")
+    expect(getAltValue).toBeInTheDocument();
   });
 
 });
