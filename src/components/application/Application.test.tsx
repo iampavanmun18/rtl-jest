@@ -14,6 +14,8 @@ describe("Application", () => {
     const name2 = screen.getByLabelText("Name");
     expect(name2).toBeInTheDocument();
 
+
+    //getByText will search for all the elements which has matched the text inside <p>,<div>,<span>
     const paragraphElement = screen.getByText("All fields are mandatory");
     // console.log("paragraphElement",paragraphElement);
     expect(paragraphElement).toBeInTheDocument();
@@ -21,6 +23,8 @@ describe("Application", () => {
     const termsElement = screen.getByRole("checkbox");
     expect(termsElement).toBeInTheDocument();
 
+
+    //getDisplayValue returns the input,textArea, or select element that has matching display value
     const getDisplayName = screen.getByDisplayValue('Pavan')
     expect(getDisplayName).toBeInTheDocument();
   });
