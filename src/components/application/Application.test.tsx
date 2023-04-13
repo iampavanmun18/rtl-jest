@@ -32,8 +32,8 @@ describe("Application", () => {
     //getByAltText returns the element that has given alt text
     //this method only supports elements which accept an alt attribute like <img> <input>
 
-    const getAltValue = screen.getByAltText("a person with a laptop")
-    expect(getAltValue).toBeInTheDocument();
+    const imageElement = screen.getByAltText("a person with a laptop")
+    expect(imageElement).toBeInTheDocument();
   });
 
 });
