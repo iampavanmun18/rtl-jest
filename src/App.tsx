@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Skills } from './components/skills/skills';
+import { Counter } from './components/counter/Counter';
 
 type AppProp ={
   name?:string,
@@ -20,6 +21,7 @@ function App(props : AppProp) {
         </p>
           Learn React {props.name} {props.age}
           <Skills skills={skills}/>
+          <Counter/>
       </header>
     </div>
   );
