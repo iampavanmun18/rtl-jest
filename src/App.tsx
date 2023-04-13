@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Skills } from './components/skills/skills';
 
 type AppProp ={
   name?:string,
@@ -8,6 +9,8 @@ type AppProp ={
 }
 
 function App(props : AppProp) {
+  const skills = ['html', 'JS', 'React']
+
   return (
     <div className="App">
       <header className="App-header">
@@ -15,14 +18,8 @@ function App(props : AppProp) {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
           Learn React {props.name} {props.age}
-        </a>
+          <Skills skills={skills}/>
       </header>
     </div>
   );

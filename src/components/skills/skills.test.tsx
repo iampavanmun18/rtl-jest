@@ -18,4 +18,22 @@ describe('Skills', () => {
         console.log("listItems",listItems);
         expect(listItems).toHaveLength(skills.length)
       })
+
+      test('render Login Button', () => {
+        render(<Skills skills={skills}/>);
+        const loginButton = screen.getByRole('button',{
+          name:'Login'
+        })
+        expect(loginButton).toBeInTheDocument();
+      })
+
+        //queryByRole is imp for asserting an element that is not present.Also returns the matching node for a query and return null if no elements matches.
+      test('Start Learning button is not renderred', () => {
+        render(<Skills skills={skills}/>);
+        const startLearningButton = screen.queryByRole('button',{
+          name:'Start Learning',
+        });
+        expect(startLearningButton).not.toBeInTheDocument();
+      })
+
 })
