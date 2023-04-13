@@ -1,6 +1,6 @@
 // watch usage -- read on this blog
 import { render, screen } from "@testing-library/react";
-import { Greet } from "./greet/greet";
+import { Greet } from "./greet";
 
 describe("Greet", () => {
   test.skip("renders correctly", () => {
@@ -25,3 +25,6 @@ describe("Greet", () => {
 //One test file means one test suite unlike to multiple test suites.
 
 // we can have multiple describe() block inside one test file i.e hierarchywise or one wole describe after another one.
+
+
+//code coverage is pretty imp in terms of CI-CD pipeline
