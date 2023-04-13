@@ -14,7 +14,6 @@ describe("Application", () => {
     const name2 = screen.getByLabelText("Name");
     expect(name2).toBeInTheDocument();
 
-
     //getByText will search for all the elements which has matched the text inside <p>,<div>,<span>
     const paragraphElement = screen.getByText("All fields are mandatory");
     // console.log("paragraphElement",paragraphElement);
@@ -23,20 +22,26 @@ describe("Application", () => {
     const termsElement = screen.getByRole("checkbox");
     expect(termsElement).toBeInTheDocument();
 
-
     //getDisplayValue returns the input,textArea, or select element that has matching display value
-    const getDisplayName = screen.getByDisplayValue('Pavan')
+    const getDisplayName = screen.getByDisplayValue("Pavan");
     expect(getDisplayName).toBeInTheDocument();
-
 
     //getByAltText returns the element that has given alt text
     //this method only supports elements which accept an alt attribute like <img> <input>
 
-    const imageElement = screen.getByAltText("a person with a laptop")
+    const imageElement = screen.getByAltText("a person with a laptop");
     expect(imageElement).toBeInTheDocument();
 
-    const spanElement = screen.getByTitle('close');
-    expect(spanElement).toBeInTheDocument();
-  });
+    //getByTitle method from query method which will work on <span> return the element that has matching title attribute
 
+    const spanElement = screen.getByTitle("close");
+    expect(spanElement).toBeInTheDocument();
+
+    //getByTestID returns the element that has matching data-tetsid atttibute
+
+    const divElement = screen.getByTestId("custom");
+    expect(divElement).toBeInTheDocument();
+  });
 });
+
+// 21 jan 2007 sugar line
