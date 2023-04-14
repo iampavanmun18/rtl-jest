@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render snapshot using react-test-renderer create method matches snapshot 1`] = `
+<div
+  data-tetsid="todo-1"
+>
+  <h1>
+    wash dishes
+  </h1>
+</div>
+`;

@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Skills } from './components/skills/skills';
 import { Counter } from './components/counter/Counter';
+import { Todo } from './components/todo/todo';
 
 type AppProp ={
   name?:string,
@@ -12,6 +13,12 @@ type AppProp ={
 function App(props : AppProp) {
   const skills = ['html', 'JS', 'React']
 
+
+  const todos = [
+    {id:1, title:'wash dishes', completed:true},
+    {id:2, title:'make bed', completed:true},
+    {id:3, title:'office work', completed:false},
+  ]
   return (
     <div className="App">
       <header className="App-header">
@@ -23,6 +30,11 @@ function App(props : AppProp) {
           <Skills skills={skills}/>
           <Counter/>
       </header>
+     <div>
+      {todos.map((todo)=>{
+        return <Todo key={todo.id} todo={todo}/>
+      })}
+     </div>
     </div>
   );
 }
