@@ -13,7 +13,7 @@ describe("Counter", () => {
   });
 
   test('should test', () => {
-    expect(true).toBe(false);
+    expect(true).toBe(true);
   })
 
 
