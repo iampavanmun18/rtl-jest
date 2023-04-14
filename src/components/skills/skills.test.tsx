@@ -38,6 +38,7 @@ describe("Skills", () => {
 
   test("Start Learning button is displayed eventually", async () => {
     render(<Skills skills={skills} />);
+    // screen.debug(); //to display vdom inside console and compare them before and after expect assertion.
     const startLearningButton = await screen.findByRole(
       "button",
       {
@@ -47,6 +48,7 @@ describe("Skills", () => {
         timeout: 2000,
       }
     );
+    // screen.debug();
     expect(startLearningButton).toBeInTheDocument();
   });
 });
