@@ -13,6 +13,8 @@ type AppProp ={
 function App(props : AppProp) {
   const skills = ['html', 'JS', 'React']
 
+  console.log("skills",skills);
+
 
   const todos = [
     {id:1, title:'wash dishes', completed:true},
